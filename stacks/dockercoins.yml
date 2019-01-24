@@ -14,11 +14,10 @@ services:
   webui:
     build: dockercoins/webui
     image: ${USERNAME}/webui:${TAG-latest}
-    ports:
-    - "8000:80"
+    #ports: #see dockercoins.override.yml
 
   redis:
-    image: redis
+    image: redis:alpine
 
   worker:
     build: dockercoins/worker
